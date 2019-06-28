@@ -1,8 +1,5 @@
 sudo: required
 
-env:
-  - VERSION=1.0.0
-
 services:
   - docker
 
@@ -13,7 +10,7 @@ branches:
 before_script:
   - docker pull ninjaneers/semantic-release
   - docker run ninjaneers/semantic-release semantic-release
-  - VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
+  - export VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
 
 script:
   - docker build -t ninjaneers/flywait:"$VERSION" .
