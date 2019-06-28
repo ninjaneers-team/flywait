@@ -5,3 +5,5 @@ services:
 
 before_install:
   - docker build -t ninjaneers/flywait .
+  - docker login $DOCKER_USERNAME $DOCKER_PASSWORD
+  - docker push ninjaneers/flywait:latest
