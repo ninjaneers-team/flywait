@@ -10,11 +10,11 @@ branches:
 before_script:
   - docker pull ninjaneers/semantic-release
   - docker run ninjaneers/semantic-release semantic-release
-  - VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
+  - export VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
 
 script:
-  - docker build -t ninjaneers/flywait:$VERSION .
-  - docker tag ninjaneers/flywait:"$VERSION" ninjaneers/flywait:latest
+  - docker build -t ninjaneers/flywait:${MY_VAR} .
+  - docker tag ninjaneers/flywait:${MY_VAR} ninjaneers/flywait:latest
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-  - docker push ninjaneers/flywait:$VERSION
+  - docker push ninjaneers/flywait:${MY_VAR}
   - docker push ninjaneers/flywait:latest
