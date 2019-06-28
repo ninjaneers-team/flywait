@@ -9,7 +9,7 @@ branches:
 
 before_script:
   - docker pull ninjaneers/semantic-release
-  - docker run ninjaneers/semantic-release
+  - docker run ninjaneers/semantic-release semantic-release
   - VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
 
 script:
