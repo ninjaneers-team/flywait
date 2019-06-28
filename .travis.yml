@@ -13,8 +13,8 @@ before_script:
   - export VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
 
 script:
-  - docker build -t ninjaneers/flywait:"$VERSION" .
-  - docker tag ninjaneers/flywait:"$VERSION" ninjaneers/flywait:latest
-  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-  - docker push ninjaneers/flywait:"$VERSION"
+  - docker build -t ninjaneers/flywait:$VERSION .
+  - docker tag ninjaneers/flywait:$VERSION ninjaneers/flywait:latest
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+  - docker push ninjaneers/flywait:$VERSION
   - docker push ninjaneers/flywait:latest
