@@ -3,7 +3,18 @@ sudo: required
 services:
   - docker
 
-before_install:
-  - docker build -t ninjaneers/flywait .
+branches:
+  only:
+  - master
+
+before_script:
+  - docker pull ninjaneers/semantic-release
+  - docker run semantic-release
+  - VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
+
+script:
+  - docker build -t ninjaneers/flywait:$VERSION .
+  - docker tag ninjaneers/flywait:$VERSION ninjaneers/flywait:latest
   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+  - docker push ninjaneers/flywait:$VERSION
   - docker push ninjaneers/flywait:latest
