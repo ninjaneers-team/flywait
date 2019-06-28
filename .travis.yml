@@ -14,7 +14,7 @@ before_script:
 
 script:
   - docker build -t ninjaneers/flywait:$VERSION .
-  - docker tag ninjaneers/flywait:$VERSION ninjaneers/flywait:latest
-  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+  - docker tag ninjaneers/flywait:"$VERSION" ninjaneers/flywait:latest
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
   - docker push ninjaneers/flywait:$VERSION
   - docker push ninjaneers/flywait:latest
