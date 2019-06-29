@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/ninjaneers-team/flywait/compare/v1.2.0...v1.2.1) (2019-06-29)
+
+
+### Bug Fixes
+
+* **pipeline:** remove unneccessary steps ([930adcd](https://github.com/ninjaneers-team/flywait/commit/930adcd))
+
 # [1.2.0](https://github.com/ninjaneers-team/flywait/compare/v1.1.0...v1.2.0) (2019-06-29)
 
 
