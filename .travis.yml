@@ -20,8 +20,4 @@ before_script:
   - export VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
 
 script:
-  - docker build -t ninjaneers/flywait:$VERSION .
-  - docker tag ninjaneers/flywait:$VERSION ninjaneers/flywait:latest
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push ninjaneers/flywait:$VERSION
-  - docker push ninjaneers/flywait:latest
+  - curl --data build=true -X POST https://cloud.docker.com/api/build/v1/source/bd5b7799-ffb3-4133-b3bb-e04359c46cdb/trigger/8d309a11-72f8-4595-b08b-9ac154fd284e/call/
