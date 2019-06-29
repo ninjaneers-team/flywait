@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/ninjaneers-team/flywait/compare/v1.2.1...v1.2.2) (2019-06-29)
+
+
+### Bug Fixes
+
+* **wait-for-healthy:** use v1.1.0 with posix fix ([ea71cc0](https://github.com/ninjaneers-team/flywait/commit/ea71cc0))
+
 ## [1.2.1](https://github.com/ninjaneers-team/flywait/compare/v1.2.0...v1.2.1) (2019-06-29)
 
 
