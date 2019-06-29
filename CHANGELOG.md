@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/ninjaneers-team/flywait/compare/v1.2.4...v1.2.5) (2019-06-29)
+
+
+### Bug Fixes
+
+* **docs:** add examples ([7f70487](https://github.com/ninjaneers-team/flywait/commit/7f70487))
+
 ## [1.2.4](https://github.com/ninjaneers-team/flywait/compare/v1.2.3...v1.2.4) (2019-06-29)
 
 
