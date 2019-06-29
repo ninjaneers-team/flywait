@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/ninjaneers-team/flywait/compare/v1.2.3...v1.2.4) (2019-06-29)
+
+
+### Bug Fixes
+
+* **wait-for-healthy:** switch to version 1.1.1 ([d184c57](https://github.com/ninjaneers-team/flywait/commit/d184c57))
+
 ## [1.2.3](https://github.com/ninjaneers-team/flywait/compare/v1.2.2...v1.2.3) (2019-06-29)
 
 
