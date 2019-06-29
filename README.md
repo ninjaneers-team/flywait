@@ -1,6 +1,6 @@
 ## Execute database migrations after a service become healthy
 
-Flywait is a container to execute migrations after a service become healthy. It uses [wait-for-healthy](https://github.com/ninjaneers-team/wait-for-healthy)
+Flywait is a container to execute migrations after a service become healthy. It uses [Flyway](https://flywaydb.org/) and [wait-for-healthy](https://github.com/ninjaneers-team/wait-for-healthy).
 
 [![Build Status](https://travis-ci.org/ninjaneers-team/flywait.svg?branch=master)](https://travis-ci.org/ninjaneers-team/flywait)
 
