@@ -1,3 +1,4 @@
+language: node_js
 sudo: required
 
 services:
@@ -8,8 +9,7 @@ branches:
   - master
 
 before_script:
-  - docker pull ninjaneers/semantic-release
-  - docker run -e GH_TOKEN=$GH_TOKEN -v $(pwd):/app ninjaneers/semantic-release semantic-release
+  - npx semantic-release
   - git pull
   - export VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
 
