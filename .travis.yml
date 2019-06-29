@@ -1,6 +1,9 @@
 language: node_js
 sudo: required
 
+node_js:
+  - "10"
+  
 services:
   - docker
 
@@ -8,8 +11,10 @@ branches:
   only:
   - master
 
-before_script:
+install:
   - npm install -g npx
+
+before_script:
   - npx semantic-release
   - git pull
   - export VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
