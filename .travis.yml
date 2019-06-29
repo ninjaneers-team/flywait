@@ -16,5 +16,3 @@ install:
 
 script:
   - semantic-release
-  - git pull
-  - export VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
