@@ -1,5 +1,5 @@
 {
-  "repositoryUrl": "git+https://@github.com:ninjaneers-team/flywait.git",
+  "repositoryUrl": "git+https://@github.com/ninjaneers-team/flywait.git",
     "plugins": [
       "@semantic-release/commit-analyzer",
       [
