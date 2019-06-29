@@ -12,6 +12,7 @@ branches:
   - master
 
 install:
+  - npm install -g @semantic-release/release-notes-generator @semantic-release/commit-analyzer @semantic-release/changelog @semantic-release/github @semantic-release/git
   - npm install -g npx
 
 before_script:
