@@ -9,6 +9,7 @@ branches:
   - master
 
 before_script:
+  - npm install -g npx
   - npx semantic-release
   - git pull
   - export VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
