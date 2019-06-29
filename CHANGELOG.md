@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ninjaneers-team/flywait/compare/v1.0.0...v1.1.0) (2019-06-29)
+
+
+### Features
+
+* **docker:** add automated builds ([9170dd8](https://github.com/ninjaneers-team/flywait/commit/9170dd8))
+
 # 1.0.0 (2019-06-29)
 
 
