@@ -18,6 +18,3 @@ before_script:
   - semantic-release
   - git pull
   - export VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
-
-script:
-  - curl --data build=true -X POST https://cloud.docker.com/api/build/v1/source/bd5b7799-ffb3-4133-b3bb-e04359c46cdb/trigger/8d309a11-72f8-4595-b08b-9ac154fd284e/call/
