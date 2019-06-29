@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/ninjaneers-team/flywait/compare/v1.2.5...v1.2.6) (2019-06-29)
+
+
+### Bug Fixes
+
+* **readme:** add description ([08d7bba](https://github.com/ninjaneers-team/flywait/commit/08d7bba))
+
 ## [1.2.5](https://github.com/ninjaneers-team/flywait/compare/v1.2.4...v1.2.5) (2019-06-29)
 
 
