@@ -14,7 +14,7 @@ branches:
 install:
   - npm install -g semantic-release @semantic-release/release-notes-generator @semantic-release/commit-analyzer @semantic-release/changelog @semantic-release/github @semantic-release/git
 
-before_script:
+script:
   - semantic-release
   - git pull
   - export VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
