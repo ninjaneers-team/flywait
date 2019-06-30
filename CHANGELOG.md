@@ -1,3 +1,10 @@
+## [1.2.8](https://github.com/ninjaneers-team/flywait/compare/v1.2.7...v1.2.8) (2019-06-30)
+
+
+### Bug Fixes
+
+* **docker:** fix script permissions ([6817c82](https://github.com/ninjaneers-team/flywait/commit/6817c82))
+
 ## [1.2.7](https://github.com/ninjaneers-team/flywait/compare/v1.2.6...v1.2.7) (2019-06-30)
 
 
