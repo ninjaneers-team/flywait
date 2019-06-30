@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/ninjaneers-team/flywait/compare/v1.2.6...v1.2.7) (2019-06-30)
+
+
+### Bug Fixes
+
+* **docker:** fix entrypoint ([7abeca3](https://github.com/ninjaneers-team/flywait/commit/7abeca3))
+
 ## [1.2.6](https://github.com/ninjaneers-team/flywait/compare/v1.2.5...v1.2.6) (2019-06-29)
 
 
