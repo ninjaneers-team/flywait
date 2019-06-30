@@ -6,7 +6,7 @@ Flywait is a container to execute migrations after a service become healthy. It 
 
 ## How to use this image
 
-`docker run sh -c './wait-for-healthy -t 60 http://httpbin:80/status/200 -- flyway -url=jdbc:postgresql://database/test -user=test -password=test -connectRetries=60 migrate'`
+`docker run ./wait-for-healthy -t 60 http://httpbin:80/status/200 -- flyway -url=jdbc:postgresql://database/test -user=test -password=test -connectRetries=60 migrate
 
 ## With docker-compose
 
@@ -31,8 +31,7 @@ services:
   flywait:
     image: ninjaneers/flywait:latest
     restart: on-failure
-    entrypoint: ''
-    command: sh -c './wait-for-healthy -t 60 http://httpbin:80/status/200 -- flyway -url=jdbc:postgresql://database/test -user=test -password=test -connectRetries=60 migrate'
+    command: ./wait-for-healthy -t 60 http://httpbin:80/status/200 -- flyway -url=jdbc:postgresql://database/test -user=test -password=test -connectRetries=60 migrate
     depends_on:
       - httpbin
     volumes:
