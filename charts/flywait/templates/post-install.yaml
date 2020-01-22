@@ -33,7 +33,7 @@ spec:
             - name: {{ template "flywait.fullname" . }}-config-volume
               mountPath: /flywait
           command: ["/bin/sh"]
-          args: ["-c", "./wait-for-healthy -t 120 {{ .Values.healthUri }} -- flyway -url={{Values.databse.connectionUri}} -user={{ .Values.database.user }} -password={{ .Values.database.password }} -connectRetries=60 -baselineOnMigrate=true migrate"]
+          args: ["-c", "./wait-for-healthy -t 120 {{ .Values.healthUri }} -- flyway -url={{ .Values.database.connectionUri }} -user={{ .Values.database.user }} -password={{ .Values.database.password }} -connectRetries=60 -baselineOnMigrate=true migrate"]
       restartPolicy: OnFailure
       volumes:
         - name: {{ template "flywait.fullname" . }}-config-volume
