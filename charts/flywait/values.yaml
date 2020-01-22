@@ -23,6 +23,8 @@ data:
   # We start with V2 because of baselineOnMigrate=true
   # V2__create-init-user.sql: |
     #   INSERT INTO users (id, active) VALUES ('1', true);
+  # V3__create-company.sql: |
+    #   INSERT INTO companies (id, name) VALUES ('1', 'Example Corp');
     
 serviceAccount:
   # Specifies whether a service account should be created
