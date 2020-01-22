@@ -1,18 +1,44 @@
-language: node_js
 sudo: required
 
-node_js:
-  - "10"
-  
 services:
   - docker
 
-branches:
-  only:
-  - master
+stages:
+  - test
+  - versioning
+  - release
 
-install:
-  - npm install -g semantic-release @semantic-release/release-notes-generator @semantic-release/commit-analyzer @semantic-release/changelog @semantic-release/github @semantic-release/git
-
-script:
-  - semantic-release
+jobs:
+  include:
+    - stage: test
+      language: minimal
+      if: branch = master
+      env:
+        - NAME=flywait
+      script:
+        - helm lint charts/$NAME
+    - stage: versioning
+      language: node_js
+      node_js: "10"
+      install:
+        - npm install -g semantic-release @semantic-release/release-notes-generator @semantic-release/commit-analyzer @semantic-release/changelog @semantic-release/github @semantic-release/git
+      if: branch = master
+      script:
+        - semantic-release
+    - stage: release
+      language: minimal
+      if: branch = master
+      env:
+        - NAME=flywait
+        - TEAM=ninjaneers-team
+        - REPOSITORY=charts
+        - VERSION=1.0.0
+      before_install:
+        - curl -L https://git.io/get_helm.sh | bash
+        - git pull
+        - helm init --client-only
+        - VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
+      script:
+        - helm lint charts/$NAME
+        - helm package charts/$NAME --version=$VERSION
+        - ./.ci/update_chart.sh

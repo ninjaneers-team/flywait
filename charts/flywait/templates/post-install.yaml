@@ -1,0 +1,41 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "flywait.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "flywait.name" . }}
+    helm.sh/chart: {{ include "flywait.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Name }}
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+spec:
+  template:
+    metadata:
+      name: {{ template "flywait.name" . }}
+      labels:
+        app: {{ template "flywait.name" . }}
+        release: "{{ .Release.Name }}"
+        component: batch
+    spec:
+      {{- if .Values.imagePullSecrets }}
+      imagePullSecrets:
+      {{- range .Values.imagePullSecrets }}
+      - name: {{ . }}
+      {{- end }}
+      {{- end }}
+      containers:
+        - name: {{ include "flywait.name" . }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+            - name: {{ template "flywait.fullname" . }}-config-volume
+              mountPath: /flywait
+          command: ["/bin/sh"]
+          args: ["-c", "./wait-for-healthy -t 120 {{ .Values.healthUri }} -- flyway -url=jdbc:postgresql://{{ .Values.database.host }}:{{ .Values.database.port }}/{{ .Values.database.name }} -user={{ .Values.database.root.user }} -password={{ .Values.database.root.password }} -connectRetries=60 -baselineOnMigrate=true migrate"]
+      restartPolicy: OnFailure
+      volumes:
+        - name: {{ template "flywait.fullname" . }}-config-volume
+          configMap:
+            name: {{ template "flywait.fullname" . }}-config
