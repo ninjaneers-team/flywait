@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/ninjaneers-team/flywait/compare/v1.2.8...v1.3.0) (2020-01-22)
+
+
+### Bug Fixes
+
+* **chart:** fix linting step in pipeline ([2f2c4f0](https://github.com/ninjaneers-team/flywait/commit/2f2c4f085b271014fabb5e895687fef6d6a38430))
+
+
+### Features
+
+* **chart:** add single batch job chart for flywait ([029ef39](https://github.com/ninjaneers-team/flywait/commit/029ef3914344b2e684edc22c994d1928259ed622))
+
 ## [1.2.8](https://github.com/ninjaneers-team/flywait/compare/v1.2.7...v1.2.8) (2019-06-30)
 
 
