@@ -11,4 +11,4 @@ curl -X PUT -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: applicatio
           \"email\": \"charts@ninjaneers.de\"
         },
         \"content\":\"$(base64 $NAME-$VERSION.tgz | tr -d \\n)\"
-      }") > /dev/null
+      }")
