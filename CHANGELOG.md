@@ -1,3 +1,11 @@
+## [1.3.5](https://github.com/ninjaneers-team/flywait/compare/v1.3.4...v1.3.5) (2020-01-22)
+
+
+### Bug Fixes
+
+* **configmap:** rename ([3508099](https://github.com/ninjaneers-team/flywait/commit/3508099e8eba58dfa8ea0e8d5ccfd42cf847d235))
+* **configmap:** rename ([6504a67](https://github.com/ninjaneers-team/flywait/commit/6504a67bf211f2195e20c9518b66f166e597a83a))
+
 ## [1.3.4](https://github.com/ninjaneers-team/flywait/compare/v1.3.3...v1.3.4) (2020-01-22)
 
 
