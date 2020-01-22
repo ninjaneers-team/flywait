@@ -1,3 +1,11 @@
+## [1.3.2](https://github.com/ninjaneers-team/flywait/compare/v1.3.1...v1.3.2) (2020-01-22)
+
+
+### Bug Fixes
+
+* **chart:** change interface ([6d455e1](https://github.com/ninjaneers-team/flywait/commit/6d455e18837498cb2278f05fb3777c08e0957181))
+* **chart:** fix configmap ([c86b874](https://github.com/ninjaneers-team/flywait/commit/c86b874297e1921944f7e30ce0b3531486632e2d))
+
 ## [1.3.1](https://github.com/ninjaneers-team/flywait/compare/v1.3.0...v1.3.1) (2020-01-22)
 
 
