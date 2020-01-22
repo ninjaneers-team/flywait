@@ -38,4 +38,4 @@ spec:
       volumes:
         - name: {{ template "flywait.fullname" . }}-config-volume
           configMap:
-            name: {{ template "flywait.fullname" . }}-config
+            name: {{ template "flywait.fullname" . }}-flywait-config
