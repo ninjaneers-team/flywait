@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/ninjaneers-team/flywait/compare/v1.3.3...v1.3.4) (2020-01-22)
+
+
+### Bug Fixes
+
+* **publish:** fix publish step ([bd01b8b](https://github.com/ninjaneers-team/flywait/commit/bd01b8b9f02a7a199451cfce82b6b12558b1d74a))
+
 ## [1.3.3](https://github.com/ninjaneers-team/flywait/compare/v1.3.2...v1.3.3) (2020-01-22)
 
 
