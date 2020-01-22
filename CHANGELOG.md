@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/ninjaneers-team/flywait/compare/v1.3.0...v1.3.1) (2020-01-22)
+
+
+### Bug Fixes
+
+* **pipeline:** fix update_chart ([18b4d7f](https://github.com/ninjaneers-team/flywait/commit/18b4d7f69d1a13edefe59e41c97d1a063b52033d))
+
 # [1.3.0](https://github.com/ninjaneers-team/flywait/compare/v1.2.8...v1.3.0) (2020-01-22)
 
 
