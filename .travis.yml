@@ -15,6 +15,9 @@ jobs:
       if: branch = master
       env:
         - NAME=flywait
+      before_install:
+      - curl -L https://git.io/get_helm.sh | bash
+      - helm init --client-only
       script:
         - helm lint charts/$NAME
     - stage: versioning
