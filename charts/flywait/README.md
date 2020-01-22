@@ -19,9 +19,7 @@ The following table lists the configurable parameters of the FusionAuth chart an
 
 Parameter | Description | Default
 --- | --- | ---
-`database.host` | The database host. Default is empty. | `nil`
-`database.port` | The database port. The default port is 5432 | `5432`
-`database.name` | The database name. The default jdbc connection string will be: `jdbc:postgresql://<<release-name>>-postgresql:5432/database` | `fusionauth`
+`database.connectionUri` | The database host. Default is empty. | `nil`
 `database.user` | The database user that will be created during configuration to own the FusionAuth schema and to connect to the database at FusionAuth runtime. Setting this environment variable will override the database.username in the Configuration file. See the Configuration Reference for more information. | `localhost`
 `database.password` | The database password that will be created during configuration to own the FusionAuth schema and to connect to the database at FusionAuth runtime. If you are deploying this into production it is extremely important that you sent this value to something other than the default. Setting this environment variable will override the database.password in the Configuration file. See the Configuration Reference for more information. | `localhost`
 `database.root.user` | The database root user that is used to create the FusionAuth schema and FusionAuth user. Once FusionAuth is configured and running this value is no longer used and is never persisted. | `localhost`
