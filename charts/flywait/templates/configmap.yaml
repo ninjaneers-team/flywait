@@ -9,8 +9,8 @@ metadata:
     app: {{ template "flywait.name" . }}
 data:
   {{- if .Values.data }}
-    {{- range $key, $value := .Values.data }}
-    {{ $key }}: |
-    {{ $value | indent 4 }}
-    {{- end -}}
-    {{- end -}}
+  {{- range $key, $value := .Values.data }}
+  {{ $key }}: |
+{{ $value | indent 4 }}
+  {{- end -}}
+{{- end -}}
